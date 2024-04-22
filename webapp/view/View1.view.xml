@@ -1,0 +1,63 @@
+<mvc:View
+    controllerName="com.app.binding.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:core="sap.ui.core"
+>
+    <l:HorizontalLayout id="_IDGenHorizontalLayout1">
+            <Image
+        class="pic"
+            id="_IDGenImage1"
+            src="{/Actors/1/photo}"
+        />
+        <l:VerticalLayout
+            id="idVerticalLayout"
+            binding="{/Actors/0}"
+        >
+            <Input
+                id="_IDGenInput1"
+                value="{=${fName}}"
+                editable="true"
+            />
+<!-- If the age is graterthan 30 there is no-chance to edit -->
+            <!-- <Input
+                id="_IDGenInput2"
+                value="{age}"
+                editable="{= ${age} > 30 ? false : true }"
+            /> -->
+<!-- If the age is graterthan 10 or 30 or equal to 54 then only have a chance to edit -->
+            <!-- <Input
+                id="_IDGenInput3"
+                value="{age}"
+                editable="{= ${age} > 10 || ${age} > 30 || ${age} === 54 ? true : false}"
+            /> -->
+<!-- If the age is graterthan 10 and 30 and equal to 53 then only have a chance to edit -->
+<!-- Here the value is exactly equal to 53 -->
+            <Input
+                id="_IDGenInput4"
+                value="{age}"
+                editable="{= ${age} > 10 &amp;&amp; ${age} > 30 &amp;&amp; ${age} === 53 ? true : false}"
+            />
+
+            <Input
+                id="_IDGenInput5"
+                value="{Born At}"
+                editable="true"
+            />
+            <Input
+                id="_IDGenInput6"
+                value="{DOB}"
+                editable="false"
+            />
+            <Button
+                id="_IDGenButton1"
+                text="Submit"
+                press="onSubmitData"
+            />
+        </l:VerticalLayout>
+
+    </l:HorizontalLayout>
+</mvc:View>

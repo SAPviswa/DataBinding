@@ -1,0 +1,18 @@
+{
+    "Actors": [
+        {
+            "fName": "Mic",
+            "age": 53,
+            "Born At": "Syracuse, NY",
+            "DOB": "July 3, 1962",
+            "photo": "https://www.simplilearn.com/ice9/free_resources_article_thumb/what_is_image_Processing.jpg"
+        },
+        {
+            "fName": "Ai Generation",
+            "age": 54,
+            "Born At": "New York City, NY",
+            "DOB": "April 4, 1965",
+            "photo": "https://www.simplilearn.com/ice9/free_resources_article_thumb/what_is_image_Processing.jpg"
+        }
+    ]
+}
